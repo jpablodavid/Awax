@@ -18,6 +18,19 @@ header {
     color: white;
 }
 
+.button {
+    display: inline-block;
+    background-color: #B28756;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
  /* css header, nav, menu */
 .container {
     max-width: 1140px;
@@ -90,7 +103,8 @@ header {
 
 .banner .slide {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    display: inline-block;
 }
 
 .banner .slidearea {
@@ -99,8 +113,7 @@ header {
     height: 100%;
     justify-content: center;
     align-items: center;
-    color: white;
-    padding-bottom: 200px;    
+    color: white;   
 }
 
 .banner h1 {
@@ -116,19 +129,6 @@ header {
 .banner h2 {
     text-transform: uppercase;
     margin-top: 20px;
-}
-
-.banner a{
-    display: block;
-    background-color: #B28756;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 30px;
-    padding: 10px 30px;
-    border-radius: 20px;
 }
 
 .banner .sliders-pointers {
@@ -195,9 +195,6 @@ header {
 
 .default.light {
     background-color: #f7f7f7;
-}
-
-.default.light {
     color: black;
 }
 
@@ -205,8 +202,269 @@ header {
 
 .default.dark {
     background-color: black;
+    color: white;
 }
 
-.default.dark {
+
+/* Css AboutUS */
+
+.aboutus {
+    display: flex;
+}
+
+.aboutus--left {
+    flex: 1;
+}
+
+.aboutus p {
+    font-size: 14px;
+    line-height: 25px;
+
+    margin-top: 10px;
+}
+
+.aboutus--right {
+    width: 520px;
+    text-align: center;
+}
+
+.aboutus img {
+    width: 480px;
+    box-shadow: 0 5px 10px #333;
+}
+
+
+/* Css Services */
+
+.services {
+    display: flex;
+}
+
+.services .icones {
+    flex: 1;
+    text-align: center;
+    border-right: 3px solid #333;
+    padding: 15px;
+}
+
+.services .icones:first-child {
+    border-left: 3px solid #333;
+}
+
+.services .icones i {
+    color: #B28756;
+}
+
+.services h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.services p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+/* Css Projects */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects--filters {
+    border: 1px solid #eee;
+    background-color: #eee;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 2px 0;
+}
+
+.projects li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid white;
+    border-bottom: 3px solid #eee;
+    color: #555;
+    cursor: pointer;
+}
+
+.projects li:hover,
+.projects li.active {
+    border-bottom: 3px solid #B28756;
+}
+
+.projects li:first-child {
+    border-left: none;
+}
+
+.projects--photos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    /* se não couber na linha ela quebra a linha */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo {
+    width: 280px;
+}
+
+.photoarea {
+    margin:10px;
+    width: 260px;
+    height: 160px;
+}
+
+.photoarea img {
+    /* inherit: herda do pai */
+    width: inherit;
+    height: inherit;
+}
+
+.photoarea--info {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
+}
+
+.photoarea--info h5 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.photoarea--info p {
+    color: #ddd;
+}
+
+.photoarea:hover .photoarea--info{
+   display: flex;
+}
+
+
+/* Css Our Team */
+
+.bg-team {
+    background-image: url(/src/images/banner.jpg);
+    background-size: cover;
+    background-position: top;
+    padding: 0;
+}
+
+.team-area {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 0;
+}
+
+.team {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+.team .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.team .slide {
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.team .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding-bottom: 200px;
+    padding: 30px;   
+}
+
+.team .slidearea .avatar {
+    width: 150px;
+    height: auto;
+
+}
+
+.team .slidearea .team--name {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.team .slidearea .team--cargo {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.team .slidearea .team--social {
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+.team .slidearea .team--social a {
+    margin-right: 3px;
+}
+
+.team .slidearea .team--social i {
+    color:#999;
+}
+
+.team .slidearea .team--social i:hover {
+    color: #B28756;
+}
+
+.team-area .sliders-pointers {
+    margin-top: 30px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-area .pointer {
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid #B28756;
+    border-radius: 8px;
+
+    margin: 0 5px;
+
+    cursor: pointer;
+}
+
+.team-area .pointer.active,
+.team-area .pointer:hover {
+    background-color: #B28756;
 }
